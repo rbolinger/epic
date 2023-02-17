@@ -101,6 +101,7 @@ while running:
 
     # If we haven't checked for new images recently, check for new images
     if last_check < datetime.datetime.now()-datetime.timedelta(minutes=check_delay) or first_run == True:
+        first_run=False
         print(str(datetime.datetime.now())+" Checking for new images.")
         
         last_check = datetime.datetime.now()
